@@ -1,0 +1,129 @@
+/* Reset básico para remover margens e paddings padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Substitua pela fonte desejada */
+  background-color: #f4f4f4; /* Cor de fundo clara para o corpo do site */
+}
+
+.background-preto {
+  background-color: #000; /* Cor de fundo preta */
+  padding-bottom: 50px; /* Espaçamento no fundo da seção */
+}
+
+/* Estilos do cabeçalho */
+header {
+  color: #fff; /* Texto branco */
+  padding: 20px 0; /* Espaçamento acima e abaixo do cabeçalho */
+}
+
+.conteudo, .conteudo2 {
+  max-width: 1200px; /* Largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  padding: 20px; /* Espaçamento interno */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff; /* Texto branco */
+  font-size: 24px; /* Tamanho da fonte */
+}
+
+.menu-ativo {
+  list-style-type: none; /* Remove os marcadores da lista */
+}
+
+.menu-ativo li {
+  display: inline-block; /* Exibe os itens da lista na horizontal */
+  margin-right: 20px; /* Espaçamento à direita dos itens */
+}
+
+.menu-ativo a {
+  text-decoration: none;
+  color: #fff; /* Texto branco */
+}
+
+.btn-gradiente {
+  background-image: linear-gradient(to right, #f06, #a6f); /* Gradiente de exemplo */
+  color: #000000; /* Texto branco */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border-radius: 5px; /* Bordas arredondadas */
+  text-decoration: none;
+}
+
+/* Estilos da seção principal */
+main h1, main h2 {
+  color: #fff; /* Texto branco */
+}
+
+.main-text {
+  text-align: center; /* Centraliza o texto na seção principal */
+}
+
+.main-img img {
+  display: block;
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+/* Estilos da galeria de anéis */
+.logo2 a {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #996ab4; /* Texto preto para o título da galeria de anéis */
+}
+
+.galeria-aneis {
+  list-style-type:none;
+display:flex;
+flex-wrap :wrap;
+justify-content :space-around;
+gap :20px;/* Espaço entre os itens*/
+}
+.item-anel{
+width :calc(33.333% -40px);/* Largura para três itens por linha com espaçamento entre eles*/
+margin-bottom :20px;/* Espaçamento abaixo dos itens*/
+}
+.item-anel img{
+width :100%;/* Ajusta a imagem para a largura do container*/
+height:auto;/* Altura automática para manter a proporção da imagem*/
+}
+/* Estilo para o botão do menu em dispositivos móveis*/
+.btn-menu{
+display:none;/* Escondido por padrão*/
+background-color:#333;/* Cor de fundo do botão*/
+color:#050303;/* Cor do texto*/
+padding :10px15px;/* Espaçamento interno*/
+font-size :16px;/* Tamanho da fonte*/
+border:none;/* Sem borda*/
+cursor:pointer;/* Cursor em forma de ponteiro ao passar o mouse*/
+}
+
+.img4{
+
+  text-align: center;
+}
+
+/* Exibe o botão em telas menores (responsividade)*/
+@media screen and (max-width :960px){
+.btn-menu{
+  display:block;/* Mostra o botão em telas menores que768px*/
+  margin-bottom :20px;/* Espaçamento abaixo do botão*/
+}
+.menu-ativo{
+  display:none;/* Esconde o menu principal em telas menores*/
+}
+.menu-ativo.ativo{
+  display:block;/* Mostra o menu quando a classe 'ativo' é adicionada pelo JS*/
+}
+}
